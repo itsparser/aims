@@ -22,6 +22,8 @@
 #![doc()]
 
 
+pub mod oauth2;
+
 // #[cfg(test)]
 // mod tests {
 //     #[test]

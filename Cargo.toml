@@ -2,7 +2,25 @@
 name = "aims"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "An OAuth2 implementation"
+authors = ["Vasanthkumar Kalaiselvan <itsparser@gmail.com>"]
+repository = "https://github.com/itsparser/aims"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+default = ["rustls-tls"]
+pkce-plain = []
+native-tls = ["reqwest/native-tls"]
+rustls-tls = ["reqwest/rustls-tls"]
+
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", default-features = false, features = ["clock", "serde", "std"] }
+base64 = "0.13"
+http = "0.2"
+rand = "0.8"
+reqwest = { version = "0.11", optional = true, default-features = false, features = ["blocking"] }
