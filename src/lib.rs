@@ -21,8 +21,8 @@
 //!
 #![doc()]
 
-
 pub mod oauth2;
+pub mod scim;
 
 // #[cfg(test)]
 // mod tests {
