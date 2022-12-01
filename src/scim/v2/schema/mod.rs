@@ -62,7 +62,7 @@ mod tests {
 
     #[test]
     fn serialization() {
-        let tag = CoreSchema::load(SchemaType::User).expect("Error Panics");
+        let tag = CoreSchema::load(SchemaType::User);
         println!("{:?}", tag)
     }
 }
